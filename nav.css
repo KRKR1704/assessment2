@@ -1,0 +1,104 @@
+
+.menu-container {
+
+    float: right;
+    cursor: pointer;
+}
+
+.sc-logo{
+    display: none;
+}
+
+.hamburger-menu {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+    cursor: pointer;
+}
+#ham{
+    scale: 1.2;
+    font-weight: bolder;
+    margin-top: -3px;
+}
+
+.dropdown {
+    display: inline;
+    position: absolute;
+    margin-top: 40px;
+    top: 25px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* navbar */
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 3%;
+}
+
+.link{
+    display: none;
+}
+
+#link{
+    text-decoration: none;
+    color: grey;
+    font-family: 'Vi-Medium';
+}
+
+@media screen and (max-width: 415px){
+    #link{
+        display: none;
+    }
+    .link{
+        text-decoration: none;
+        color: black;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: flex;
+    }
+
+    .sc-logo{
+        display: block;
+        padding: 2px 30px;
+    }
+
+    #logo{
+        width: 80px;
+        height: 80px;
+    }
+    
+    #ham{
+        scale: 2;
+        margin-top: -18px;
+        margin-right: -55px;
+    }
+
+    .dropdown {
+        display: inline;
+        position: absolute;
+        margin-top: 40px;
+        margin-right: -70px;
+        top: 25px;
+        background-color: white;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }    
+
+}

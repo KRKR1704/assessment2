@@ -1,0 +1,352 @@
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: end;
+    overflow-y: scroll;
+}
+
+.popup-content {
+    background-color: #fff;
+    position: absolute;
+    width: 35%;
+    height: auto;
+    border-radius: 5px 0px 0px 5px;
+    /* text-align: center; */
+}
+
+.pop-paynow{
+    background-color: red;
+    border: none;
+    color: white;
+    border-radius: 30px;
+    height: 60px;
+    width: 180px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.pop-paynowdiv{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    bottom: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0),white );
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
+
+/* Styles for the close button */
+.close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 35px;
+    right: 80px;
+    font-size: 50px;
+}
+
+
+/* /inside pop up */
+
+#pd{
+    margin-top: 55px;
+    margin-left: 70px;
+}
+#z-pa{
+    font-family: 'Vi-Bold';
+    background-color: #ffc400;
+    margin-bottom: -2px;
+    margin-right: 210px;
+    margin-left: 70px;
+    padding: 7px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.pack-d{
+    background-color: #2f3043;
+    line-height: 1px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.detail{
+    display: flex;
+    justify-content: space-between;
+    color: #dddee0;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.dimg{
+    display: flex;
+    font-family: 'Vi-Regular';
+}
+#img{
+    scale: 1.3;
+    padding-right: 8px;
+}
+#line{
+    margin-left: 65px;
+    margin-right: 65px;
+    border: none;
+    background-color: #5c5c6c;
+    height: 2px;
+}
+
+.detail1{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+#amt-b{
+    font-family: 'Vi-Heavy';
+    font-size: 20px;
+}
+
+#amtl{
+    font-family: 'Vi-Regular';
+}
+
+#mamt{
+    font-family: 'Vi-Regular';
+    font-size: 20px;
+}
+
+.mplan{
+    background-color: #dfebfb;
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 15px;
+    line-height: 1px;
+}
+.plan{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Vi-Regular';
+    margin-left: 70px;
+    margin-right: 70px;
+    
+    
+}
+
+.dayimg{
+    background-color: #fff;
+    display: flex;
+    padding: 5px 10px;
+    border-radius: 25px;
+    scale: 0.8;
+    margin-right: -15px;
+}
+
+#pb{
+    font-family: 'Vi-Bold';
+}
+
+#line1{
+    background-color: #c7dcf8;
+    border: none;
+    height: 2px;
+    margin-left: 65px;
+    margin-right: 65px;
+}
+#ab-b{
+    margin-left: 70px;
+    margin-right: 70px;
+}
+.zee{
+    display: flex;
+    line-height: 1;
+}
+#zee-img{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+.zee-data{
+    padding-top: -12px;
+    margin-top: -20px;
+    padding-bottom: 20px;
+}
+#zee-font{
+    font-family: 'Vi-Bold';
+    font-weight: bolder;
+    font-size: 20px;
+}
+#data-font{
+    font-family: 'Vi-Bold';
+    color: #797a86;
+}
+#descr-font{
+    font-family: 'Vi-Regular';
+    color: #70717e;
+    font-size: 14px;
+}
+#term-font{
+    color: black;
+}
+.roll-o{
+    display: flex;
+    margin-bottom: 30px;
+}
+#data-img{
+    margin-right: 20px;
+    margin-top: -250px;
+}
+#line2{
+    background-color: #ebebed;
+    border: none;
+    height: 2px;
+}
+.addbesc{
+    margin-left: 70px;
+    margin-right: 70px;
+    /* overflow-y: scroll; */
+}
+
+#weekend-img{
+    width: 350px;
+    height: 200px;
+}
+.vimt{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+#vimt-img{
+    width: 80px;
+    height: 50px;
+}
+
+
+@media screen and (max-width: 450px){
+    .popup1 {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        margin-top: 40%;
+        height: 100%;
+        background: rgba(0.7, 0, 0, 0.7);
+        justify-content: end;
+        overflow-y: scroll;
+    }
+    
+    .popup-content1 {
+        background-color: #fff;
+        overflow-y: scroll;
+        width: 100%;
+        height: 80%;
+        bottom: 0;
+        position: absolute;
+        margin-top: 200px;
+        border-radius: 5px 0px 0px 5px;
+        /* text-align: center; */
+    }
+    #pd1{
+        margin-left: 30px;
+        font-family: 'Vi-Heavy';
+    }
+    #z-pa1{
+        font-family: 'Vi-Bold';
+        background-color: #ffc400;
+        font-size: 0.9em;
+        margin-bottom: -2px;
+        margin-right: 140px;
+        margin-left: 30px;
+        padding: 7px;
+        border-radius: 5px 5px 0px 0px;
+    }
+    .detail1{
+        display: flex;
+        justify-content: space-between;
+        color: #dddee0;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    #line-1{
+        margin-left: 30px;
+        margin-right: 30px;
+        border: none;
+        background-color: #5c5c6c;
+        height: 2px;
+    }
+    .plan1{
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Vi-Regular';
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    #line1-1{
+        background-color: #c7dcf8;
+        border: none;
+        height: 2px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    #ab-b-1{
+        margin-left: 20px;
+        margin-right: 30px;
+    }
+    .zee1{
+        display: flex;
+        line-height: 1;
+        margin-left: 30px;
+    }
+    .roll-o-1{
+        display: flex;
+        line-height: 1;
+        margin-left: 30px;
+        
+        margin-bottom: 30px;
+    }
+    #weekend-img-1{
+        width: 300px;
+        height: 150px;
+        margin-right: 20px;
+    }
+    #data-img-1{
+        margin-right: 20px;
+        margin-top: -200px;
+    }
+    .vimt-1{
+        display: flex;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    #sline{
+        margin-left: 20px;
+        margin-right: 20px;
+        color: #e7e7ea;
+    }
+    .packdetails{
+        display: flex;
+        justify-content: space-between;
+    }
+    .close-btn-cir {
+        cursor: pointer;
+        margin: 15px;
+        position: fixed;
+        top: 110px;
+        right: 0px;
+        z-index: 999;
+    }
+    .close-btn1 {
+        font-size: 40px;
+        color: #72727e;
+        height: 1em;
+        width: 1em;
+        border-radius: 50%;
+        background-color: #d5d6d9;
+        display: flex;
+        justify-content: center;
+    }
+}

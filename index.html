@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="recharge.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="mainbar.css">
+    <link rel="stylesheet" href="leftbar.css">
+    <link rel="stylesheet" href="pop.css">
+    <title>MAIN</title>
+    <style>
+    @font-face {
+            font-family: 'Vi-Bold';
+            src: url(fonts/Vi-Bold.ttf) format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Vi-Heavy';
+            src: url(fonts/Vi-Heavy.ttf) format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Vi-Medium';
+            src: url(fonts/Vi-Medium.ttf) format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Vi-Regular';
+            src: url(fonts/Vi-Regular.ttf) format('truetype');
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainbar">
+        <!-- left -->
+    <div class="left-bar">
+        <div style="margin: 10px;">
+            <div class="logo">
+                <img src="https://res.cloudinary.com/dxn0shbpg/image/upload/v1694532732/group-6-copy_osf6jx.svg"/>
+            </div>
+            <div class="row" onclick="togglePostpaid(1)">
+                <div class="profile-icon"></div>
+                <div class="info">
+                    <p class="name" >Sumit</p>
+                   <div style="display: flex; position: relative;"><span class="phone">9671241241</span>
+                    <button class="postpaid-button right:0" id="postpaid-1">Postpaid</button></div>
+                </div>
+            </div>
+            <div class="row" onclick="togglePostpaid(2)">
+                <div class="profile-icon"></div>
+                <div class="info">
+                    <p class="name" >Walter</p>
+                   <div style="display: flex; position: relative;"><span class="phone">9671241241</span>
+                        <button class="postpaid-button right:0" id="postpaid-2">Postpaid</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" onclick="togglePostpaid(3)">
+                <div class="profile-icon"></div>
+                <div class="info">
+                    <p class="name">Anjali</p>
+                    <div style="display: flex; position: relative;"><span class="phone">9671241241</span>
+                        <button class="postpaid-button right:0" id="postpaid-3">Postpaid</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" onclick="togglePostpaid(4)">
+                <div class="profile-icon"></div>
+                <div class="info">
+                    <p class="name">Prateek</p>
+                    <div style="display: flex; position: relative;"><span class="phone">9671241241</span>
+                        <button class="postpaid-button right:0" id="postpaid-4">Postpaid</button>
+                    </div>
+                </div>
+            </div>
+            <button class="red-button">add profile</button>
+        </div>
+    </div>
+
+    <script>
+        // /left side
+        var activePostpaidButton = null;
+
+        function togglePostpaid(rowNumber) {
+    var postpaidButton = document.getElementById("postpaid-" + rowNumber);
+
+    if (activePostpaidButton) {
+        activePostpaidButton.style.display = "none";
+    }
+
+    if (activePostpaidButton === postpaidButton) {
+        activePostpaidButton = null;
+    } else {
+
+        postpaidButton.style.display = "block";
+        activePostpaidButton = postpaidButton;
+    }
+    }
+    </script>
+
+    <!-- right -->
+    <!-- navbar -->
+    <div class="sc-logo">
+        <img id="logo" src="https://res.cloudinary.com/dxn0shbpg/image/upload/v1694532732/group-6-copy_osf6jx.svg"/>
+    </div>
+    <div class="right-bar">
+        <div class="nav-bar">
+                <a href="#" id="link">Get Vi App</a>
+                <a href="#" id="link">Do not disturb</a>
+                <a href="#" id="link">Help</a>
+
+                <div class="menu-container" id="ham" onclick="toggleMenu()">&#9776;</div>
+                <div class="dropdown" style="display: none;">
+                <a href="#" class="link">Get Vi App</a>
+                <a href="#" class="link">Do not disturb</a>
+                <a href="#" class="link">Help</a>
+                <div class="dropdown-item">Item 1</div>
+                <div class="dropdown-item">Item 2</div>
+                <div class="dropdown-item">Item 3</div>
+                <div class="dropdown-item">Item 4</div>
+        </div>
+    </div>
+    <!-- box of recharge history for large screen-->
+    <div class="rh-box">
+        <div id="heading">&#8592;  recharge history</div>
+        <div id="subheading">List of your recharges within last 90 days</div>
+        <div class="mh-box">
+            <!-- box 399 -->
+            <div class="h-box">
+                <div class="md-box">
+                    <p id="money">₹399</p>
+                    <p>03 October 2020, 10:20 PM</p>
+                </div>
+                <div class="md1-box">
+                    <a href="#" class="dr-item">download receipt</a>
+                    <button id="btn-ra" onclick="largeShowPopup(1)">recharge again</button>
+                </div>
+            </div>
+
+            <!-- box 109 -->
+            <div class="h-box">
+                <div class="md-box">
+                    <p id="money">₹109</p>
+                    <p>03 October 2020, 10:20 PM</p>
+                </div>
+                <div class="md1-box">
+                    <a href="#" class="dr-item">download receipt</a>
+                    <button id="btn-ra" onclick="largeShowPopup(2)">recharge again</button>
+                </div>
+            </div>
+
+            <!-- box 499 -->
+            <div class="h-box">
+                <div class="md-box">
+                <p id="money">₹499</p>
+                <p>03 October 2020, 10:20 PM</p>
+                </div>
+                <div class="md1-box">
+                    <a href="#" class="dr-item">download receipt</a>
+                    <button id="btn-ra" onclick="largeShowPopup(3)">recharge again</button>
+                </div>
+            </div>
+
+            <!-- box 699 -->
+            <div class="h-box">
+                <div class="md-box">
+                <p id="money">₹699</p>
+                <p>03 October 2020, 10:20 PM</p>
+                </div>
+                <div class="md1-box">
+                    <a href="#" class="dr-item">download receipt</a>
+                    <button id="btn-ra" onclick="largeShowPopup(4)">recharge again</button>
+                </div>
+            </div>
+
+            <!-- box 201 -->
+            <div class="h-box">
+                <div class="md-box">
+                    <p id="money">₹201</p>
+                    <p>03 October 2020, 10:20 PM</p>
+                </div>
+                <div class="md1-box">
+                    <a href="#" class="dr-item">download receipt</a>
+                    <button id="btn-ra" onclick="largeShowPopup(5)">recharge again</button>
+                </div>
+            </div>
+        </div>
+
+            <!-- Popup modal -->
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="largeClosePopup()">&times;</span>
+                <div>
+                    <h2 id="pd">pack details</h2>
+                    <p id="z-pa">ZEE5 premium access for 1 year</p>
+                    <div class="pack-d">
+                        <div class="dist">
+                            <div class="detail">
+                                <p id="mamt">Pack MRP</p>
+                                <p id="amt-b">₹ 2595</p>
+                            </div>
+                            <div class="detail">
+                                <div class="dimg">
+                                    <img id="img" src="https://res.cloudinary.com/dxn0shbpg/image/upload/v1696919172/mask_lliq1m.svg"/>
+                                    <p>Coupon applied</p>
+                                </div>
+                                <p id="amtl">-₹ 50</p>
+                            </div>
+                            <hr id="line">
+                            <div class="detail">
+                                <p id="mamt">Payable Amount</p>
+                                <p id="amt-b">₹ 2545</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mplan">
+                        <div class="plan">
+                            <p>Calls</p>
+                            <p>truly unlimited calls (to all networks)</p>
+                        </div>
+                        <hr id="line1">
+                        <div class="plan">
+                            <p>Data</p>
+                            <p id="pb">2 GB/day</p>
+                        </div>
+                        <hr id="line1">
+                        <div class="plan">
+                            <p>SMS</p>
+                            <p id="pb">100 local & national SMS/day</p>
+                        </div>
+                        <hr id="line1">
+                        <div class="plan">
+                            <p>Validity</p>
+                            <div class="dayimg">
+                                <img id="img" src="https://res.cloudinary.com/dxn0shbpg/image/upload/v1696919172/group-2_duxhsz.svg"/>
+                                <p id="pb">365 days</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 id="ab-b">additional benefits</h2>
+                    <div class="addbesc">
+                        <div class="zee">
+                            <img id="zee-img" src="https://res.cloudinary.com/dxn0shbpg/image/upload/v1696919191/bitmap_3x_htrggx.jpg"/>
+                            <div class="zee-data">
+                                <p id="zee-font">ZEE5</p>
+                                <p id="data-font">Now get ZEE5 premium access for 1 year</p>
+                                <p id="descr-font">Enjoy unlimited ente!ainment with 100+ originals,4500+ movies and Live TV.</p>
+                                <a id="term-font" href="#">T&C</a>
+                            </div>
+                        </div>
+                        <hr id="line2">
+                        <div class="roll-o">
+                            <img id="data-img" src="https://res.cloudinary.com/dxn0shbpg/image/upload/v1696919173/group-4_yi2vwb.svg"/>
+                            <div>
+                                <p id="zee-font">weekend data rollover</p>
+                                <p id="descr-font">Weekend Roll over is a data saver functionality wherein unused daily data quota from the weekdays is accumulated and is made available for use only on the weekends. i.e. Saturday & Sunday</p>
+                                <img id="weekend-img" src="https://res.cloudinary.com/dxn0shbpg/image/upload/v1694532733/ul-website-banner-448-x-252-2-01_zisy3k.png"/>
+                            </div>
+                        </div>
+                        <hr id="line2">
+                        <div class="vimt">
+                            <img id="vimt-img" src="https://res.cloudinary.com/dxn0shbpg/image/upload/v1698391334/1200x630wa_v0ufy2.png"/>
+                            <div class="zee-data">
+                                <p id="zee-font">Vi movies & TV</p>
+                                <p id="data-font">Enjoy Movies, Web-series, Live TV & Originalcontent</p>
+                                <p id="descr-font">450+ Live TV channels, 10000+ latest Bollywood, Regional & Hollywood Movies, top-rated TV shows, Original Web series. Anytime, Anywhere!</p>
+                            </div>
+                        </div>
+                        <hr id="line2">
+                    </div>
+                </div>
+                <div class="pop-paynowdiv">
+                    <button class="pop-paynow">Pay Now</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+    </div>
+
+    <!-- box of recharge history for small screen -->
+    <div class="rh1-box">
+        <div id="heading1">&#8592; recharge history</div>
+        <div id="subheading1">List of your recharges within last 90 days</div>
+        <div class="mh-box1">
+            <!-- box 399 -->
+            <div class="h-box1">
+                <div class="md-box1">
+                    <p id="money1">₹49</p>
+                    <p id="date">11 May 2020</p>
+                    <p id="time">8:08 AM</p>
+                </div>
+                <div class="md1-box1">
+                    <button id="btn-ra1" onclick="showPopup(1)">recharge again</button>
+                    <a href="#" class="dr-item1">download receipt</a>
+                </div>
+            </div>
+
+            <!-- box 109 -->
+            <div class="h-box1">
+                <div class="md-box1">
+                    <p id="money1">₹49</p>
+                    <p id="date">11 May 2020</p>
+                    <p id="time">8:08 AM</p>
+                </div>
+                <div class="md1-box1">
+                    <button id="btn-ra1" onclick="showPopup(2)">recharge again</button>
+                    <a href="#" class="dr-item1">download receipt</a>
+                </div>
+            </div>
+
+            <!-- box 499 -->
+            <div class="h-box1">
+                <div class="md-box1">
+                <p id="money1">₹49</p>
+                <p id="date">11 May 2020</p>
+                <p id="time">8:08 AM</p>
+                </div>
+                <div class="md1-box1">
+                    <button id="btn-ra1" onclick="showPopup(3)">recharge again</button>
+                    <a href="#" class="dr-item1">download receipt</a>
+                </div>
+            </div>
+
+            <!-- box 699 -->
+            <div class="h-box1">
+                <div class="md-box1">
+                <p id="money1">₹49</p>
+                <p id="date">11 May 2020</p>
+                <p id="time">8:08 AM</p>
+                </div>
+                <div class="md1-box1">
+                    <button id="btn-ra1" onclick="showPopup(4)">recharge again</button>
+                    <a href="#" class="dr-item1">download receipt</a>
+                </div>
+            </div>
+
+            <!-- box 201 -->
+            <div class="h-box1">
+                <div class="md-box1">
+                    <p id="money1">₹49</p>
+                    <p id="date">11 May 2020</p>
+                    <p id="time">8:08 AM</p>
+                </div>
+                <div class="md1-box1">
+                    <button id="btn-ra1" onclick="showPopup(5)">recharge again</button>
+                    <a href="#" class="dr-item1">download receipt</a>
+                </div>
+            </div>
+        </div>
+
+            <!-- Popup modal -->
+        <div class="popup" id="popup1">
+            <div class="popup-content1">
+                
+                <div>
+                    <div class="packdetails">
+                        <h2 id="pd1">pack details</h2>
+                        <div class="close-btn-cir">
+                            <div class="close-btn1" onclick="closePopup()">&times;</div>
+                        </div>
+                    </div>
+                    <p id="z-pa1">ZEE5 premium access for 1 year</p>
+                    <div class="pack-d">
+                        <div>
+                            <div class="detail1">
+                                <p id="mamt">Pack MRP</p>
+                                <p id="amt-b">₹ 2595</p>
+                            </div>
+                            <div class="detail1">
+                                <div class="dimg">
+                                    <img id="img" src="https://res.cloudinary.com/dxn0shbpg/image/upload/v1696919172/mask_lliq1m.svg"/>
+                                    <p>Coupon applied</p>
+                                </div>
+                                <p id="amtl">-₹ 50</p>
+                            </div>
+                            <hr id="line-1">
+                            <div class="detail1">
+                                <p id="mamt">Payable Amount</p>
+                                <p id="amt-b">₹ 2545</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mplan">
+                        <div class="plan1">
+                            <p>Calls</p>
+                            <p>truly unlimited calls (to all networks)</p>
+                        </div>
+                        <hr id="line1-1">
+                        <div class="plan1">
+                            <p>Data</p>
+                            <p id="pb">2 GB/day</p>
+                        </div>
+                        <hr id="line1-1">
+                        <div class="plan1">
+                            <p>SMS</p>
+                            <p id="pb">100 local & national SMS/day</p>
+                        </div>
+                        <hr id="line1-1">
+                        <div class="plan1">
+                            <p>Validity</p>
+                            <div class="dayimg">
+                                <img id="img" src="https://res.cloudinary.com/dxn0shbpg/image/upload/v1696919172/group-2_duxhsz.svg"/>
+                                <p id="pb">365 days</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 id="ab-b-1">additional benefits</h2>
+                    <div>
+                        <div class="zee1">
+                            <img id="zee-img" src="https://res.cloudinary.com/dxn0shbpg/image/upload/v1696919191/bitmap_3x_htrggx.jpg"/>
+                            <div class="zee-data">
+                                <p id="zee-font">ZEE5</p>
+                                <p id="data-font">Now get ZEE5 premium access for 1 year</p>
+                                <p id="descr-font">Enjoy unlimited ente!ainment with 100+ originals,4500+ movies and Live TV.</p>
+                                <a id="term-font" href="#">T&C</a>
+                            </div>
+                        </div>
+                        <hr id="sline">
+                        <div class="roll-o-1">
+                            <img id="data-img-1" src="https://res.cloudinary.com/dxn0shbpg/image/upload/v1696919173/group-4_yi2vwb.svg"/>
+                            <div>
+                                <p id="zee-font">weekend data rollover</p>
+                                <p id="descr-font">Weekend Roll over is a data saver functionality wherein unused daily data quota from the weekdays is accumulated and is made available for use only on the weekends. i.e. Saturday & Sunday</p>
+                                <img id="weekend-img-1" src="https://res.cloudinary.com/dxn0shbpg/image/upload/v1694532733/ul-website-banner-448-x-252-2-01_zisy3k.png"/>
+                            </div>
+                        </div>
+                        <hr id="sline">
+                        <div class="vimt-1">
+                            <img id="vimt-img" src="https://res.cloudinary.com/dxn0shbpg/image/upload/v1698391334/1200x630wa_v0ufy2.png"/>
+                            <div class="zee-data">
+                                <p id="zee-font">Vi movies & TV</p>
+                                <p id="data-font">Enjoy Movies, Web-series, Live TV & Originalcontent</p>
+                                <p id="descr-font">450+ Live TV channels, 10000+ latest Bollywood, Regional & Hollywood Movies, top-rated TV shows, Original Web series. Anytime, Anywhere!</p>
+                            </div>
+                        </div>
+                        <hr id="sline">
+                    </div>
+                </div>
+                <div class="pop-paynowdiv">
+                    <button class="pop-paynow">Pay Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    // right side
+    // right side hamburger
+    function toggleMenu() {
+            var menuContainer = document.querySelector('.menu-container');
+            var dropdown = document.querySelector('.dropdown');
+            menuContainer.classList.toggle('open');
+            dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+        }
+
+
+        // JavaScript to show the popup when the button is clicked large screen
+        function largeShowPopup(buttonNumber) {
+            const popup = document.getElementById("popup");
+            popup.style.display = "flex";
+        }
+
+        function largeClosePopup() {
+            const popup = document.getElementById("popup");
+            popup.style.display = "none";
+        }
+
+        // JavaScript to show the popup when the button is clicked large screen
+        function showPopup(buttonNumber) {
+            const popup = document.getElementById("popup1");
+            popup.style.display = "flex";
+        }
+
+        function closePopup() {
+            const popup = document.getElementById("popup1");
+            popup.style.display = "none";
+        }
+        
+    </script>
+</body>
+
+</html>

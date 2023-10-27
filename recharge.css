@@ -1,0 +1,215 @@
+.rh-box{
+    background-color: #fefaf6;
+    margin-left: 60px;
+    border-radius: 15px;
+}
+
+.mh-box{
+    height: 420px;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+/* scroll bar css */
+/* width */
+::-webkit-scrollbar {
+width: 10px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+padding-right: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #d8d8d8; 
+border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #8b8888; 
+}
+
+
+
+
+.h-box{
+    background-color: white;
+    box-shadow: 1px 1px #2f3043;
+    margin: 30px 50px;
+    border-radius: 25px;
+    padding: 25px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+    height: 80px;
+    
+}
+.md-box{
+    display: flex;
+    flex-direction: column;
+    color: #545465;
+    font-family: 'Vi-Medium';
+    
+}
+.md1-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+#btn-ra{
+    background-color: red;
+    border: none;
+    color: white;
+    border-radius: 30px;
+    height: 60px;
+    width: 180px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.dr-item{
+    color: black;
+    margin-right: 50px;
+    font-size: 20px;
+    font-family: 'Vi-Bold';
+}
+
+#money{
+    font-size: 30px;
+    margin-bottom: -10px;
+    font-family: 'Vi-Bold';
+    color: black;
+}
+#heading{
+    font-size: 35px;
+    margin-left: 80px;
+    margin-top: 50px;
+    font-family: 'Vi-Bold';
+}
+#subheading{
+    font-size: 18px;
+    margin-left: 110px;
+    margin-top: 20px;
+    font-family: 'Vi-Regular';
+}
+
+.rh1-box{
+    display: none;
+}
+
+@media screen and (max-width: 550px){
+    .rh-box{
+        display: none;
+    }
+
+    .rh1-box{
+        display: block;
+        background-color: #fdfdfc;
+        margin-left: -100px;
+        margin-right: -100px;
+        margin-top: 30px;
+    }
+
+    #heading1{
+        font-size: 25px;
+        font-weight: bolder;
+        font-family: 'Vi-Bold';
+        margin-top: 10px;
+    }
+
+    #subheading1{
+        font-size: 16px;
+        font-weight: lighter;
+        font-family: 'Vi-Regular';
+        margin-left: 23px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .mh-box1{
+        height: 600px;
+        margin-left: -10px;
+        overflow-y: scroll;
+        padding-top: 30px;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+        
+        }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+        display: none;
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        display: none;
+        }
+        
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        display: none; 
+        }
+
+        .h-box1{
+            background-color: white;
+            box-shadow: 1px 1px #2f3043;
+            border-radius: 10px;
+            padding: 10% 7%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 300px;
+            height: 80px;
+            margin-bottom: 12%;
+        }
+        .md1-box1{
+            display: flex;
+            flex-direction: column;
+        }
+        .md-box1{
+            line-height: 10PX;
+        }
+        #money1{
+            font-family: 'Vi-Bold';
+            font-size: 30px;
+        }
+        #date{
+            font-family: 'Vi-Bold';
+            font-size: 18px;
+        }
+        #time{
+            font-family: 'Vi-Medium';
+            color: #7a7b86;
+        }
+        #btn-ra1{
+            background-color: red;
+            border: none;
+            color: white;
+            border-radius: 30px;
+            height: 40px;
+            width: 150px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .dr-item1{
+            color: black;
+            font-size: 20px;
+            margin-top: 10%;
+            font-family: 'Vi-Bold';
+        }
+
+}
