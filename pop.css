@@ -257,7 +257,7 @@
     #z-pa1{
         font-family: 'Vi-Bold';
         background-color: #ffc400;
-        font-size: 0.9em;
+        font-size: 0.8em;
         margin-bottom: -2px;
         margin-right: 140px;
         margin-left: 30px;
@@ -305,11 +305,10 @@
         display: flex;
         line-height: 1;
         margin-left: 30px;
-        
         margin-bottom: 30px;
     }
     #weekend-img-1{
-        width: 300px;
+        width: 250px;
         height: 150px;
         margin-right: 20px;
     }
@@ -348,5 +347,10 @@
         background-color: #d5d6d9;
         display: flex;
         justify-content: center;
+    }
+    #descr-font{
+        font-family: 'Vi-Regular';
+        color: #70717e;
+        margin-right: 20px;
     }
 }
