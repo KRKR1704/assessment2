@@ -9,7 +9,7 @@ body {
 }
 
 .left-bar {
-    width: 25%;
+    width: 20%;
     height: 100vh;
     background-color: #2f3043;
     display: flex;
@@ -20,7 +20,7 @@ body {
 }
 
 .right-bar {
-    width: 75%;
+    width: 80%;
     margin-right: 100px;
     display: flex;
     flex-direction: column;
